@@ -589,6 +589,12 @@ button {
     justify-content: center;
     flex-wrap: wrap;
 }
+#k-5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
 
 /* Секция l */
 .Section-l{
@@ -823,10 +829,6 @@ footer{
         justify-content: center;
     }
     /* Секция k */
-    #k-3{
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 @media (max-width:1000px) {
