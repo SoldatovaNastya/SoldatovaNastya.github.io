@@ -54,6 +54,7 @@ nav{
 }
 .List a {
     color: #222222;
+    transition-duration: 500ms;
 }
 .List a:hover{
     color: #3F53D8;
@@ -128,16 +129,21 @@ button {
 }
 .Button{
     background: #3F53D8;
-    border-radius: 14px;    
-}
-.button{
+    border-radius: 14px;
     font-family: 'Plus Jakarta Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
     color: #FFFFFF;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.4px;    
+}
+.Button{
+    transition-duration: 500ms;    
+}
+.Button:hover{
+    background: #FFFFFF;
+    color: #080829;    
 }
 .Section-a{
     display: flex;
@@ -157,6 +163,49 @@ button {
 #Picture-a{
     display: flex;
     align-items: end;
+}
+.animation_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:#A259FF;
+    position: relative;
+    left: -1000%;
+    animation: circle 2.5s 1.5s forwards; 
+}
+@keyframes circle{
+    0%{
+        left: -1000%;
+    }
+    100%{
+        left: 125%;
+    }
+}
+#circle-2{
+    background-color:#FFC123;
+    left: 1000%;
+    animation: circle_2 2.5s forwards;
+}
+@keyframes circle_2{
+    0%{
+        left: 1000%;
+    }
+    100%{
+        left: -50%;
+    }
+}
+#circle-3{
+    background-color:#FFC123;
+    left: 1000%;
+    animation: circle_3 2.5s forwards;
+}
+@keyframes circle_3{
+    0%{
+        left: -1000%;
+    }
+    100%{
+        left: 60%;
+    }
 }
 
 /* Секция b */
@@ -220,11 +269,15 @@ button {
     margin-top: 30px;
 }
 .Picture-c-1{
-    min-width: 250px;
+    width: 250px;
     max-height: 245px;
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 #Picture-c{
     margin-top: 20px;
@@ -500,10 +553,10 @@ button {
     max-width: 700px;
 }
 .Logo-J{
-    width: 130px;
-    height: 130px;
-    margin-left: 40px;
-    margin-right: 40px;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -710,9 +763,18 @@ footer{
     color: #3F53D8;
     font-weight: 800;
 }
+.rect-k-4{
+    height: 3px;
+    background-color: #08082925;
+    margin-bottom: 20px;
+    min-width: 230px;
+}
 
 /* Адаптив */
 @media (max-width:1200px) {
+    .animation_circle{
+        display: none;
+    }
     /* Навигация */
     nav{
         justify-content: space-between;
@@ -912,7 +974,7 @@ footer{
         font-size: 18px;
     }
     .Picture-c-1{
-        max-width: 200px;
+        width: 150px;
     }
     /* Секция e */
     .Picture-e-2{
