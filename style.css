@@ -55,10 +55,11 @@ nav{
 .List a {
     color: #222222;
     transition-duration: 500ms;
+    transform: scale(1, 1);
 }
 .List a:hover{
     color: #3F53D8;
-    font-weight: 800;
+    transform: scale(1.2, 1.2);
 }
 #Logo{
     max-width: 100px;
